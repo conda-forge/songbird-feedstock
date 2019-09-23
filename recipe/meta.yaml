@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -39,6 +39,8 @@ requirements:
     - tqdm
     - h5py
     - biom-format
+    - mock
+    - google-pasta
 
 test:
   imports:
