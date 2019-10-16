@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "1.0.1" %}
 {% set name = "songbird" %}
 
 package:
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c14ff0452a88cef0ab2b38f7af951fa7cb5bac511250202be9000d6102bcd65
+  sha256: 1dd762ff871a6d69da9e6536ab4cdbc6027f3e50234c0c659f18470310046a8e
 
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
