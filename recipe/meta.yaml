@@ -26,21 +26,15 @@ requirements:
 
   run:
     - python
-    - ipython
     - pandas
     - click
-    - tensorflow ==1.14.0
+    - tensorflow >=1.15,<2
     - numpy >1.13
     - scikit-bio >0.5.4
-    - nose >=1.3.7
-    - seaborn
     - patsy
-    - scikit-learn
     - tqdm
     - h5py
     - biom-format
-    - mock
-    - google-pasta
 
 test:
   imports:
