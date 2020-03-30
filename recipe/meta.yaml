@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set name = "songbird" %}
 
 package:
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 670b97f2ca404c8390d2c349fa0d5bebceed5f70dc193902d428b32bc16d61ac
+  sha256: c1bc374eb8188ef13934a1f4d1df3183d0819e95d434f0c53e6333eda5865074
 
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
   entry_points:
     - qiime2.plugins = songbird.q2.plugin_setup:plugin
@@ -45,7 +45,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Vanilla regression methods for microbiome differential abundance analysis'
+  summary: Vanilla regression methods for microbiome differential abundance analysis
 
 extra:
   recipe-maintainers:
